@@ -62,7 +62,7 @@ console.log('\n Opdr2. 4xloop 1xklaar!');
 // >> 9
 // ==========================================
 {
-console.log('\n Opdr3. 123.. >>..'); // Under construction
+console.log('\n Opdr3. 123.. >>..');
 {
     for (let i = 0; i < 10; i++) {
         if (i<3){

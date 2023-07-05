@@ -80,7 +80,7 @@ console.log('\n');
     let strCube = '';
     for (let i = 0; i < cubes.length; i++) {
         intCubeSize=Math.pow(cubes[i],3);
-        cubes[i]='Het volume van '+cubes[i]+' is '+intCubeSize
+        cubes[i]='Het volume van '+cubes[i]+' is '+intCubeSize;
     }
     console.log(cubes);
     console.log('End Opdr3.');

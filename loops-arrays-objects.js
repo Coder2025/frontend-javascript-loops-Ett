@@ -35,7 +35,7 @@ const scores = [
 // ==========================================
 {
     console.log('Opdracht 1b');
-    let scoreInt = 0
+    let scoreInt = 0;
     let scoreChar = '';
 
     for (let i = 0; i < scores.length; i++) {
@@ -79,7 +79,7 @@ const scores = [
     console.log('Opdracht 1c');
     console.log(scores);
 
-    let scoreInt = 0
+    let scoreInt = 0;
     let scoreChar = '';
 
     for (let i = 0; i < scores.length; i++) {
@@ -103,7 +103,7 @@ const scores = [
             default:
                 scoreChar = 'nou';
         }
-        scores[i].grade = scoreChar
+        scores[i].grade = scoreChar;
     }
     console.log(scores);
     console.log('===========================================');
@@ -131,11 +131,11 @@ const NOVIEmployees = [
 // ==========================================
 {
     console.log('Opdracht 2');
-    console.log(NOVIEmployees)
+    console.log(NOVIEmployees);
     for (let i = 0; i < NOVIEmployees.length; i++) {
-        NOVIEmployees[i].email = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl'
+        NOVIEmployees[i].email = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl';
     }
-    console.log(NOVIEmployees)
+    console.log(NOVIEmployees);
     console.log('===========================================');
 }
 
@@ -149,7 +149,7 @@ const NOVIEmployees = [
         strEmail = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl';
         NOVIEmployees[i].email = strEmail.toLowerCase();
     }
-    console.log(NOVIEmployees)
+    console.log(NOVIEmployees);
     console.log('===========================================');
 }
 
@@ -221,7 +221,7 @@ const zipcodes = [
         strZipCode = students[i].zipCode;
         for (let j = 0; j < zipcodes.length; j++) {
             if (strZipCode === zipcodes[j].zipCode) {
-                students[i].neighborhood = zipcodes[j].neighborhood
+                students[i].neighborhood = zipcodes[j].neighborhood;
             }
         }
     }
