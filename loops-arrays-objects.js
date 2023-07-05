@@ -15,11 +15,13 @@ const scores = [
 // 92
 // 66ç
 // ==========================================
-
-
-
-
-
+{
+    console.log('Opdracht 1a');
+    for (let i = 0; i < scores.length; i++) {
+        console.log(scores[i].score);
+    }
+    console.log('===========================================');
+}
 // ==========================================
 // Opdracht 1b
 // Breid je script uit door voor iedere student de score om te rekenen naar een letter en dit in de terminal te printen
@@ -31,11 +33,36 @@ const scores = [
 // A
 // D
 // ==========================================
+{
+    console.log('Opdracht 1b');
+    let scoreInt = 0
+    let scoreChar = '';
 
-
-
-
-
+    for (let i = 0; i < scores.length; i++) {
+        scoreInt = scores[i].score;
+        switch (true) {
+            case (scoreInt < 60):
+                scoreChar = 'F';
+                break;
+            case (scoreInt < 70):
+                scoreChar = 'D';
+                break;
+            case (scoreInt < 80):
+                scoreChar = 'C';
+                break;
+            case (scoreInt < 90):
+                scoreChar = 'B';
+                break;
+            case (scoreInt < 100):
+                scoreChar = 'A';
+                break;
+            default:
+                scoreChar = 'nou';
+        }
+        console.log(scoreChar);
+    }
+    console.log('===========================================');
+}
 // ==========================================
 // Opdracht 1c
 // Breid je script uit door de bijbehorende letter op te slaan in de 'grade'-property van ieder student-object in de array.
@@ -48,11 +75,39 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
+{
+    console.log('Opdracht 1c');
+    console.log(scores);
 
+    let scoreInt = 0
+    let scoreChar = '';
 
-
-
-
+    for (let i = 0; i < scores.length; i++) {
+        scoreInt = scores[i].score;
+        switch (true) {
+            case (scoreInt < 60):
+                scoreChar = 'F';
+                break;
+            case (scoreInt < 70):
+                scoreChar = 'D';
+                break;
+            case (scoreInt < 80):
+                scoreChar = 'C';
+                break;
+            case (scoreInt < 90):
+                scoreChar = 'B';
+                break;
+            case (scoreInt < 100):
+                scoreChar = 'A';
+                break;
+            default:
+                scoreChar = 'nou';
+        }
+        scores[i].grade = scoreChar
+    }
+    console.log(scores);
+    console.log('===========================================');
+}
 // ==========================================
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
@@ -74,17 +129,29 @@ const NOVIEmployees = [
 //   { firstName: 'Mark', lastName: 'Rensen', email: 'Mark.Rensen@novi.nl' },
 //  ];
 // ==========================================
-
-
-
-
-
+{
+    console.log('Opdracht 2');
+    console.log(NOVIEmployees)
+    for (let i = 0; i < NOVIEmployees.length; i++) {
+        NOVIEmployees[i].email = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl'
+    }
+    console.log(NOVIEmployees)
+    console.log('===========================================');
+}
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
-
+{
+    console.log('Opdracht 2-BONUS');
+    let strEmail = '';
+    for (let i = 0; i < NOVIEmployees.length; i++) {
+        strEmail = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl';
+        NOVIEmployees[i].email = strEmail.toLowerCase();
+    }
+    console.log(NOVIEmployees)
+    console.log('===========================================');
+}
 
 
 // ==========================================
@@ -131,5 +198,33 @@ const students = [
 // ]
 // ==========================================
 
+const zipcodes = [
+    {zipCode: '3513', neighborhood: 'Pijlsweerd'},
+    {zipCode: '3514', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3572', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3581', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3512', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3513', neighborhood: 'Pijlsweerd'},
+    {zipCode: '3583', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3572', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3531', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3531', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3514', neighborhood: 'Vogelenbuurt'},
+    {zipCode: '3531', neighborhood: 'Vogelenbuurt'},
+];
 
+{
+    console.log('Opdracht 3');
+    let strZipCode = '';
 
+    for (let i = 0; i < students.length; i++) {
+        strZipCode = students[i].zipCode;
+        for (let j = 0; j < zipcodes.length; j++) {
+            if (strZipCode === zipcodes[j].zipCode) {
+                students[i].neighborhood = zipcodes[j].neighborhood
+            }
+        }
+    }
+    console.log(students);
+    console.log('===========================================');
+}
