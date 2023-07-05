@@ -1,32 +1,49 @@
-// ==========================================
-// Opdracht 1. Maak een for loop die het volgende patroon in de terminal print:
-// Verwachte uitkomsten:
-// *
-// **
-// ***
-// ****
-// *****
-
-// Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
-// Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
-// ==========================================
-
-
-
-
-
-// ==========================================
-// Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
-// Verwachte uitkomsten:
-// loop...
-// loop...
-// loop...
-// loop...
-// klaar!
-// ==========================================
+// // ==========================================
+// // Opdracht 1. Maak een for loop die het volgende patroon in de terminal print:
+// // Verwachte uitkomsten:
+// // *
+// // **
+// // ***
+// // ****
+// // *****
+console.log('Opdr1. Regular loop');
+{
+let xStar =5;
+let strXstar = "";
+for (let i = 0; i < xStar; i++) {
+        strXstar=strXstar+'*'
+        console.log(strXstar);
+}}
 
 
+// // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
+// // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+// // ==========================================
+console.log('\n Opdr1. Use .repeat()');
+{
+const strXstar = '*';
+for (let i = 1; i < 6; i++) {
+    console.log(strXstar.repeat(i));
+}}
 
+
+// // ==========================================
+// // Opdracht 2. Maak een for-loop die 4 keer het woord "loop..." logt, en bij de laatste (vijfde) loop het woord "klaar!"
+// // Verwachte uitkomsten:
+// // loop...
+// // loop...
+// // loop...
+// // loop...
+// // klaar!
+// // ==========================================
+console.log('\n Opdr2. 4xloop 1xklaar!');
+{
+    const strWord = 'loop';
+    for (let i = 0; i < 4; i++) {
+        console.log(strWord);
+    }
+    console.log('Klaar!');
+}
 
 
 // ==========================================
@@ -44,10 +61,19 @@
 // >> 8
 // >> 9
 // ==========================================
-
-
-
-
+{
+console.log('\n Opdr3. 123.. >>..');
+{
+    for (let i = 0; i < 10; i++) {
+        if (i<3){
+            console.log(i);
+        } else if (i>=3 && i<6){
+            console.log('> '+i);
+        } else if (i>=6){
+            console.log('>> '+i);
+        }
+    }
+}}
 
 // ==========================================
 // Opdracht 4 (BONUS): schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -86,6 +112,21 @@
 // FizzBuzz
 // etc.
 // ==========================================
-
-
-
+console.log('\n Opdr4. Fizz Buzz');
+{
+let f = "Fizz";
+let b = "Buzz";
+for (let i = 1; i <=100 ; i++) {
+    if (i% 3 === 0 && i % 5 ===0){
+        console.log(f + b);
+    }
+    else if (i% 5 === 0){
+        console.log(b);
+    }
+    else if (i% 3 === 0){
+        console.log(f);
+    }
+    else {
+        console.log(i);
+    }
+}}
